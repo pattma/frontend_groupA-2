@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../assets/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Body Style */
+.wrapper.login {
+    position: relative;
+    top: 40px;
+    width: 400px;
+    height: 470px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper.login .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper.login .icon-close a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(241, 86, 35, 1);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: scale 0.2 ease;
+}
+
+.wrapper.login .icon-close a:hover {
+    scale: 1.05;
+}
+
+.wrapper.login .icon-close a:active {
+    scale: 0.95;
+}
+
+.wrapper.login .form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.wrapper.login .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.wrapper.login .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrapper.login .input-box input:focus~label,
+.wrapper.login .input-box input:valid~label {
+    top: -5px;
+}
+
+.wrapper.login .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.wrapper.login .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.wrapper.login .remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper.login .remember-forgot label input {
+    accent-color: rgba(241, 86, 35, 1);
+    margin-right: 3px;
+}
+
+.wrapper.login .remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+    transition: scale 0.2 ease;
+}
+
+.wrapper.login .remember-forgot a:hover {
+    text-decoration: underline;
+    color: rgba(241, 86, 35, 1);
+}
+
+.wrapper.login .btn {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(112, 103, 174, 1);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    transition: scale 0.2 ease;
+}
+
+.wrapper.login .btn:hover {
+    background-color: rgba(241, 86, 35, 1);
+    scale: 1.05;
+}
+
+.wrapper.login .btn:active {
+    scale: 0.95;
+}
+
+.wrapper.login .login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.wrapper.login .login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+    transition: scale 0.2 ease;
+}
+
+.wrapper.login .login-register p a:hover {
+    text-decoration: underline;
+    color: rgba(241, 86, 35, 1);
+}
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+    .wrapper.login {
+        width: 450px;
+        margin: 0 auto;
+    }
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+    .wrapper.login {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .wrapper.login .form-box {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .wrapper.login .form-box h2 {
+        font-size: 1.8em;
+    }
+
+    .wrapper.login .input-box label {
+        font-size: 0.9em;
+    }
+
+    .wrapper.login .remember-forgot {
+        font-size: 0.8em;
+    }
+
+    .wrapper.login .login-register {
+        font-size: 0.8em;
+    }
+}

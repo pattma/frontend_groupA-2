@@ -1,0 +1,160 @@
+.activities_card {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.activity-card {
+    /* position: fixed; */
+    width: 90%;
+    margin: 50px auto;
+    /* transform: translate(-50%, -50%); */
+    background: #D9D9D9;
+    opacity: 0.8;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+
+
+.activity-card > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 50px 30px;
+    /* padding-top: 30px; */
+    /* border: 1px solid red; */
+}
+
+.activity-card > .header > h2 {
+    font-size: 30px;
+}
+
+.activity-card > .header > span {
+    /* border: 1px solid red; */
+}
+
+.activity-card > .header span button {
+    /* border: 1px solid red; */
+    border-color: transparent;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+.activity-card-detail {
+    margin: 30px 50px 25px;
+}
+
+.activity-card-detail > .name {
+    font-size: 22px;
+}
+
+.activity-card-detail > .description {
+    font-size: 18px;
+    margin: 0;
+}
+
+.activity-card-detail > hr {
+    border: 2px solid #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.activity-tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+    /* padding-right: 30px;
+    padding-left: 10px; */
+    /* border: 1px solid red; */
+}
+
+.activity-tab .activity-left-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.activity-tab .activity-left-tab img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.activity-tab .activity-left-tab p {
+    font-weight: 700;
+    font-size: 20px;
+    /* border: 1px solid red; */
+}
+
+.activity-tab .activity-right-tab.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.activity-tab .activity-right-tab.detail p {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.activity-tab .activity-right-tab.detail span {
+    font-size: 20px;
+}
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+    .activity-card {
+        width: 90%;
+        border: 1px solid transparent;
+    }
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+    .activity-card {
+        width: 100%;
+        border: 1px solid transparent;
+    }
+
+    .activity-card .header {
+        margin: 30px auto;
+        width: 85%;
+        padding-top: 10px;
+        /* border: 1px solid red; */
+    }
+
+    .activity-card-detail {
+        width: 85%;
+        margin: 0 auto 25px;
+        /* border: 1px solid red; */
+    }
+
+    .activity-tab {
+        width: 98%;
+        margin: 15px auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 25px;
+        gap: 20px;
+        /* border: 1px solid red; */
+    }
+
+    .activity-tab .activity-left-tab {
+        margin: 0 10px;
+    }
+
+    .activity-tab > div:nth-child(4) {
+        /* border: 1px solid red; */
+        margin: 0 15px;
+    }
+
+    /* .activity-tab > .activity-right-tab > .detail > p {
+        font-size: 15px;
+    }
+    
+    .activity-tab > .activity-right-tab > .detail > span {
+        font-size: 15px;
+    } */
+}
