@@ -40,10 +40,10 @@ export function DoChart({ sumWalkDuration, sumSwimDuration, sumRunDuration, sumB
       <Doughnut 
         data={
           {
-            // labels: ['Walk', 'Swim', 'Run', 'Bike', 'Badminton'],
+            labels: ['Walking', 'Swimming', 'Running', 'Biking', 'Badminton'],
             datasets: [
               {
-                label: 'TImes per week',  // add percent
+                label: 'Total',  // add percent
                 data: [sumWalkDuration, sumSwimDuration, sumRunDuration, sumBikeDuration, sumBadmintonDuration],
                 backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
@@ -71,7 +71,7 @@ export function DoChart({ sumWalkDuration, sumSwimDuration, sumRunDuration, sumB
         options={{
           maintainAspectRatio: true, plugins: {
             legend: {
-              display: true,
+              display: false,
             },
           },
         }}

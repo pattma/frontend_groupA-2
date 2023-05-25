@@ -257,7 +257,7 @@ a {
 }
 
 .grid-right .doughnut {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
     /* border: 1px solid red; */
@@ -453,6 +453,7 @@ a {
         height: 70vh;
         gap: 80px;
         width: 90%;
+        opacity: 75%;
     }
 
     .grid-right .doughnut {

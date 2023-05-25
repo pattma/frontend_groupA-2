@@ -7,6 +7,7 @@ import CreateCard_Page from '../src/pages/createCard_page/CreateCard_Page';
 import EditCard_Page from '../src/pages/editCard_page/EditCard_Page';
 import Dashboard_Page from '../src/pages/dashboard_page/Dashboard_Page';
 import EditProfile_Page from './pages/editProfile_page/EditProfile_Page';
+import Cookies from 'js-cookie';
 
 import {
   createBrowserRouter,
@@ -14,6 +15,17 @@ import {
 } from "react-router-dom";
 import UserContext from '../src/contexts/UserContext';
 import ActivityContext from '../src/contexts/ActivityContext';
+
+const RouteProtection = ({ children }) => {
+
+  const token = Cookies.get('TOKEN');
+
+  if (token) {
+    return children;
+  } else {
+    return location.href = '/'
+  }
+};
 
 const router = createBrowserRouter([
   {
@@ -33,22 +45,38 @@ const router = createBrowserRouter([
 
   {
     path: '/create_card',
-    element: <CreateCard_Page />
+    element: (
+      <RouteProtection>
+        <CreateCard_Page />
+      </RouteProtection>
+    )
   },
 
   {
     path: '/edit_card/:activityID',
-    element: <EditCard_Page />
+    element: (
+      <RouteProtection>
+        <EditCard_Page />
+      </RouteProtection>
+    )
   },
 
   {
     path: '/dashboard',
-    element: <Dashboard_Page />
+    element: (
+      <RouteProtection>
+        <Dashboard_Page />
+      </RouteProtection>
+      )
   },
 
   {
     path: '/edit_profile',
-    element: <EditProfile_Page />
+    element: (
+      <RouteProtection>
+        <EditProfile_Page />
+      </RouteProtection>
+    )
   }
 ])
 
