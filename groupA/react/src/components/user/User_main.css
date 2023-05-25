@@ -91,13 +91,13 @@
 .info_user {
     font-size: 1rem;
     text-align: center;
-    /* border-bottom: 0.5px solid #000; */
 }
 
 .stat_user {
     font-size: 24px;
     text-align: center;
     margin-top: 16px;
+    margin-bottom: 5px;
 }
 
 .goals_user {
@@ -105,6 +105,7 @@
     flex-direction: column;
     align-items: self-start;
     justify-content: center;
+    padding-left: 20px;
     width: 70%;
     margin: 0 auto;
 }
@@ -120,10 +121,11 @@
     height: 40px;
     width: 40px;
     margin-left: 16px;
+    margin-right: 20px;
 }
 
 .activity_icons > p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-left: 15px;
     padding-top: 15px;
     /* align-items: center;    
@@ -298,9 +300,17 @@ a {
 @media screen and (max-width: 1024px) {
     .grid-main {
         grid-template-columns: 1fr;
-        gap: 5rem;
+        width: 100%;
+        gap: 3rem;
+        padding-bottom: 30px;
         height: auto;
         top: 12rem;
+        /* border: 1px solid red; */
+    }
+
+    .profile_pic {
+        width: 230px;
+        height: 230px;
     }
 
     .grid-middle {
@@ -311,7 +321,61 @@ a {
 
     .grid-right {
         height: 80vh;
-        width: 95%;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        opacity: 85%;
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        border-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .info_user {
+        font-size: 1.2rem;
+        margin: 10px auto;
+    }
+
+    .EditUserBTN > button {
+        margin-top: 20px;
+    }
+
+    .stat_user {
+        font-size:30px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .goals_user {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        /* padding: 0 70px; */
+        padding-left: 50px;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .activity_icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .activity_icons > img{
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+        margin-left: 16px;
+        margin-right: 30px;
+    }
+    
+    .activity_icons > p{
+        font-size: 1.2rem;
+        padding-left: 15px;
+        padding-top: 15px;
     }
 }
 
@@ -320,6 +384,61 @@ a {
     .grid-main {
         gap: 2rem;
         top: 9.5rem;
+    }
+
+    .profile_pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info_user {
+        font-size: 1rem;
+        text-align: center;
+        margin: 5px auto;
+        /* border: 1px solid red; */
+    }
+
+    .EditUserBTN > button {
+        margin-top: 20px;
+    }
+
+    .stat_user {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 0;
+    }
+    
+    .goals_user {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        width: 80%;
+        /* padding: 0 0px; */
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    
+    .activity_icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .activity_icons > img{
+        margin: 10px;
+        height: 40px;
+        width: 40px;
+        margin-left: 16px;
+    }
+    
+    .activity_icons > p{
+        font-size: 1rem;
+        padding-left: 15px;
+        padding-top: 15px;
+        /* align-items: center;    
+        display: flex; */
     }
 
     .grid-middle {
@@ -333,7 +452,7 @@ a {
     .grid-right {
         height: 70vh;
         gap: 80px;
-        width: 100%;
+        width: 90%;
     }
 
     .grid-right .doughnut {

@@ -40,7 +40,7 @@ const Navbar = function({ token }) {
                 { !token && <li key="li-02"><a href="#custom-cards" >Activities</a></li> }
                 { !token && <li key="li-03"><a href="#hanging-icons" >Features</a></li> }
                 { token && <li key="li-04"><a href="/dashboard" >Dashboard</a></li> }
-                { !token && <li key="li-05"><a href="#about" >About</a></li> }
+                {/* { !token && <li key="li-05"><a href="#about" >About</a></li> } */}
                 { !token && <li key="li-06"><button className="btnLogin-popup"><a href="/login">Login</a></button></li> }
                 { token && <li key="li-07"><button onClick={submitLogout} className="btnSignout-popup">Signout</button></li> }
             </ul>

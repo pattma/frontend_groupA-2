@@ -5,10 +5,16 @@ import "../user/User_main.css";
 import LineChart from "./LineChart";
 import { DoChart } from "./DoChart";
 
-const User_right = function () {
+const User_right = function ({ sumWalkDuration, sumSwimDuration, sumRunDuration, sumBikeDuration, sumBadmintonDuration}) {
   return (
     <div className='grid-right' >
-        <DoChart />
+        <DoChart 
+          sumWalkDuration={sumWalkDuration}
+          sumSwimDuration={sumSwimDuration}
+          sumRunDuration={sumRunDuration}
+          sumBikeDuration={sumBikeDuration}
+          sumBadmintonDuration={sumBadmintonDuration}
+        />
         <LineChart />
         {/* <p>Test .</p> */}
     </div>

@@ -11,7 +11,7 @@ import EditProfile from "../editProfile/EditProfile";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import userDefaultimage from '../../assets/icon/user-default.png';
 
-const User_left = function ({ profile, user }) {
+const User_left = function ({ profile, user, walkDuration, swimDuration, runDuration, bikeDuration, badmintonDuration }) {
 
   // add useState
   // const [profilePic, setProfilePic] = useState("./src/assets/icon/man.png");
@@ -42,7 +42,8 @@ const User_left = function ({ profile, user }) {
       </div>
 
       <p className="name_user">{user.firstName} {user.lastName}</p>
-      <p className="info_user">Age: {profile.age} gender: {profile.gender} Weight: {profile.weight} kg Height: {profile.height} cm</p>
+      <p className="info_user">Age: {profile.age} gender: {profile.gender}</p>
+      <p className="info_user">Weight: {profile.weight} kg Height: {profile.height} cm</p>
       <div className="EditUserBTN">
         <button>
           <a href="/edit_profile">Edit</a>
@@ -52,23 +53,23 @@ const User_left = function ({ profile, user }) {
       <div className="goals_user">
         <div className="activity_icons">
           <img src={walkImage} />
-          <p>Distance : 10 km</p>
+          <p>Duration : {walkDuration || "00:00:00"} hours</p>
         </div>
         <div className="activity_icons">
           <img src={swimImage} />
-          <p>Distance : 10 km</p>
+          <p>Duration : {swimDuration || "00:00:00"} hours</p>
         </div>
         <div className="activity_icons">
           <img src={runImage} />
-          <p>Distance : 10 km</p>
+          <p>Duration : {runDuration || "00:00:00"} hours</p>
         </div>
         <div className="activity_icons">
           <img src={bikeImage} />
-          <p>Distance : 25 km</p>
+          <p>Duration : {bikeDuration || "00:00:00"} hours</p>
         </div>
         <div className="activity_icons">
           <img src={badmintonImage} />
-          <p>Duration : 1.30 hours</p>
+          <p>Duration : {badmintonDuration || "00:00:00"} hours</p>
         </div>
       </div>
     </div>

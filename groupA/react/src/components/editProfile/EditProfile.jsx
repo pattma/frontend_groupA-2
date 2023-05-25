@@ -43,7 +43,7 @@ const EditProfile = function({ onSubmitCreateProfile, onChangeBirthDate, onChang
                             </select>
                         </div>
                         <div className="input-box">
-                            <span className="details">{`Height (kg) ${height && `: ${height}`}`}</span>
+                            <span className="details">{`Height (cm) ${height && `: ${height}`}`}</span>
                             <input type="number" step=".01" onChange={onChangeHeight} placeholder="Enter your height" required />
                         </div>
                         <div className="input-box">

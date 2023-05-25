@@ -71,7 +71,7 @@ const ActivityCard = ({ card, onDelete }) => {
                         </div>
                     </div>
                 );
-            })};
+            })}
         </div>
     );
 };

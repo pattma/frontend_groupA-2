@@ -10,7 +10,7 @@ const Heroes = () => {
                 <h1 className="display-4 fw-bold lh-1">What is Fitbook?</h1>
                 <p className="lead">Fitbook is the activity tracker web application is designed for busy people who want to keep track of their physical activities but don't have much time to do the activities.</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                    <button type="button" className="btn btn-primary btn-lg px-4 me-md-2 fw-bold btnColor">Learn More</button>
+                    <a href='/login'><button type="button" className="btn btn-primary btn-lg px-4 me-md-2 fw-bold btnColor">Learn More</button></a>
                 </div>
             </div>
             <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
